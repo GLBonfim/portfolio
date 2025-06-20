@@ -43,13 +43,21 @@ Este é o repositório do meu portfólio pessoal, uma aplicação web moderna e 
 ## 📂 Estrutura do Projeto
 
 .
-├── index.html                  # Página principal do portfólio
+├── index.html
 ├── src/
-│   ├── style.css               # Estilos CSS principais e temas (escuro/claro)
-│   └── script.js               # Lógica JavaScript para interatividade da UI
-├── starry_background.js        # Script para o fundo de noite estrelada
-├── profile.jpg                 # Imagem de perfil (substitua pela sua)
-└── README.md                   # Este arquivo (você está lendo ele!)
+│   ├── style.css
+│   └── script.js
+├── starry_background.js
+├── profile.jpg
+└── README.md
+
+* `index.html`: Página principal do portfólio.
+* `src/`: Pasta para arquivos de estilo e scripts.
+    * `style.css`: Estilos CSS principais e temas (escuro/claro).
+    * `script.js`: Lógica JavaScript para interatividade da interface do usuário.
+* `starry_background.js`: Script para o fundo de noite estrelada.
+* `profile.jpg`: Imagem de perfil.
+* `README.md`: Este arquivo que você está lendo.
 
 
 ## 🖥️ Como Visualizar e Rodar
