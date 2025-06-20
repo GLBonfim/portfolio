@@ -10,7 +10,7 @@
 
 <br>
 
-(![alt text](/src/image.png))
+![alt text](/src/image.png)
 
 ## 🌟 Visão Geral
 
