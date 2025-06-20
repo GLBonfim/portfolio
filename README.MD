@@ -42,19 +42,12 @@ Este é o repositório do meu portfólio pessoal, uma aplicação web moderna e 
 
 ## 📂 Estrutura do Projeto
 
-.
-├── index.html
-
 ├── src/
-
-│   ├── style.css
-
-│   └── script.js
-
+│   └── style.css
+├── index.html
+│  script.js
 ├── starry_background.js
-
 ├── profile.jpg
-
 └── README.md
 
 * `index.html`: Página principal do portfólio.
