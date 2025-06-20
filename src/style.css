@@ -1,0 +1,431 @@
+/* Basic Reset & Font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: #0d1117; /* Tema escuro padrão */
+    color: #c9d1d9;
+    line-height: 1.6;
+    overflow-y: auto; /* Permite scroll vertical */
+    position: relative;
+    min-height: 100vh;
+    /* Transições globais para uma mudança de tema suave */
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* O CANVAS precisa cobrir a tela toda e ficar atrás do conteúdo */
+#starryBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    display: block;
+    background-color: transparent;
+    transition: opacity 0.5s ease, visibility 0.5s ease; /* Transição para ocultar/mostrar */
+}
+
+/* Hero Section, Navigation, and Content Sections precisam de um z-index > -1 */
+.hero-section, .main-navigation, .content-section {
+    position: relative;
+    z-index: 1;
+}
+
+/* Estilo para o botão da lâmpada */
+#theme-toggle-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100; /* Garante que fique acima de tudo */
+    background-color: #161b22; /* Fundo escuro inicial */
+    color: #ffd700; /* Cor da lâmpada (amarelo ouro) */
+    border: 1px solid #2e3a4e;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease, transform 0.2s ease;
+}
+
+#theme-toggle-btn:hover {
+    background-color: #2e3a4e;
+    transform: scale(1.05); /* Pequena escala ao passar o mouse */
+}
+
+#theme-toggle-btn:active {
+    transform: scale(0.95); /* Efeito de "pressionar" ao clicar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Sombra mais sutil ao pressionar */
+}
+
+#theme-toggle-btn i {
+    pointer-events: none; /* Garante que o clique seja no botão, não no ícone */
+    transition: color 0.5s ease, transform 0.2s ease, text-shadow 0.5s ease; /* Transição para o ícone */
+}
+
+/* Animação de brilho para a lâmpada quando "acende" */
+@keyframes bulbGlow {
+    0% { text-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+    50% { text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.5); }
+    100% { text-shadow: 0 0 5px rgba(255, 255, 255, 0); }
+}
+
+#theme-toggle-btn i.glowing {
+    animation: bulbGlow 1s ease-out forwards; /* Aplica a animação de brilho */
+}
+
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 30px;
+}
+
+.profile-pic-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    border: 5px solid #00c4cc;
+    box-shadow: 0 0 15px rgba(0, 196, 204, 0.7);
+    transition: border-color 0.5s ease, box-shadow 0.5s ease; /* Transição para o tema */
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 5px;
+    color: #fff;
+    transition: color 0.5s ease; /* Transição para o tema */
+}
+
+.hero-section .role {
+    font-size: 1.2em;
+    color: #8be9fd;
+    margin-bottom: 25px;
+    transition: color 0.5s ease; /* Transição para o tema */
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: #c9d1d9;
+    font-size: 1.8em;
+    margin: 0 15px;
+    transition: color 0.3s ease, transform 0.3s ease; /* Transição para o tema */
+}
+
+.social-links a:hover {
+    color: #00c4cc;
+    transform: scale(1.1);
+}
+
+/* Main Navigation */
+.main-navigation ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+.main-navigation a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #161b22;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #8be9fd;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Transição para o tema */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.main-navigation a:hover,
+.main-navigation a.active {
+    background-color: #00c4cc;
+    color: #0d1117;
+    transform: translateY(-3px);
+}
+
+.main-navigation a i {
+    font-size: 1.1em;
+}
+
+/* Content Sections */
+.content-section {
+    background-color: #161b22;
+    padding: 30px;
+    margin: 0 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid #2e3a4e;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out,
+                transform 0.5s ease-in-out, padding 0.5s ease-in-out, margin 0.5s ease-in-out,
+                background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease; /* Transição para o tema */
+    overflow: hidden; /* Mantido para a transição de max-height */
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.content-section.hidden {
+    opacity: 0;
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    transform: translateY(20px);
+    /* Não adicione display: none aqui para permitir transição de opacidade/transform */
+}
+
+
+.content-section h2 {
+    color: #00c4cc;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.5s ease; /* Transição para o tema */
+}
+
+.content-section p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+.content-section ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.content-section ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.content-section ul li i { /* Estilo para ícones dentro das listas de skills */
+    margin-right: 8px;
+    color: #8be9fd; /* Cor do ícone, pode ser ajustado */
+    transition: color 0.5s ease; /* Transição para o tema */
+}
+
+.content-section ul li::before {
+    content: '> ';
+    color: #00c4cc;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: color 0.5s ease; /* Transição para o tema */
+}
+
+/* Projects Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.project-item {
+    background-color: #0d1117;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #2e3a4e;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.5s ease, border-color 0.5s ease, box-shadow 0.5s ease; /* Transição para o tema */
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+}
+
+.project-item h3 {
+    color: #8be9fd;
+    margin-bottom: 10px;
+    transition: color 0.5s ease; /* Transição para o tema */
+}
+
+.project-item p {
+    font-size: 0.95em;
+    margin-bottom: 15px;
+}
+
+.project-item a {
+    display: inline-block;
+    background-color: #00c4cc;
+    color: #0d1117;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transição para o tema */
+}
+
+.project-item a:hover {
+    background-color: #00999d;
+}
+
+
+/* -------------------- TEMA CLARO -------------------- */
+body.light-theme {
+    background-color: #f5f7fa; /* Fundo claro geral - menos branco que #f0f2f5 */
+    color: #333; /* Texto escuro */
+}
+
+body.light-theme #starryBackground {
+    opacity: 0;
+    visibility: hidden;
+}
+
+body.light-theme .hero-section h1 { color: #222; }
+body.light-theme .hero-section .role { color: #007bff; }
+body.light-theme .profile-pic-container {
+    border-color: #007bff;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
+}
+body.light-theme .social-links a { color: #555; }
+body.light-theme .social-links a:hover { color: #007bff; }
+
+body.light-theme .main-navigation a {
+    background-color: #eef1f5; /* Fundo mais claro para links de navegação - menos branco */
+    color: #007bff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .main-navigation a:hover,
+body.light-theme .main-navigation a.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+body.light-theme .content-section {
+    background-color: #ffffff; /* Mantido branco para contraste com o fundo */
+    color: #444;
+    border: 1px solid #dcdcdc;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .content-section h2 { color: #007bff; }
+body.light-theme .content-section ul li i { color: #007bff; }
+body.light-theme .content-section ul li::before { color: #007bff; }
+
+body.light-theme .project-item {
+    background-color: #fcfcfe; /* Fundo para itens de projeto no tema claro - mais suave */
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+body.light-theme .project-item h3 { color: #0056b3; }
+body.light-theme .project-item a {
+    background-color: #007bff;
+    color: #fff;
+}
+body.light-theme .project-item a:hover { background-color: #0056b3; }
+
+body.light-theme #theme-toggle-btn {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #0056b3;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 30px 15px; /* Reduz padding em mobile */
+    }
+    .hero-section h1 {
+        font-size: 2em;
+    }
+    .hero-section .role {
+        font-size: 1em;
+    }
+    .social-links a {
+        font-size: 1.5em;
+        margin: 0 10px;
+    }
+    .main-navigation ul {
+        flex-direction: column; /* Links em coluna */
+        align-items: center;
+        gap: 10px; /* Menor espaçamento */
+        margin-bottom: 30px;
+    }
+    .main-navigation a {
+        width: 90%; /* Ocupa quase toda a largura */
+        max-width: 300px;
+        justify-content: center;
+    }
+    .content-section {
+        margin: 0 15px 25px; /* Margens um pouco menores */
+        padding: 25px;
+    }
+    .content-section h2 {
+        font-size: 1.6em;
+    }
+    .project-grid {
+        grid-template-columns: 1fr; /* Um projeto por linha em mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 1.8em;
+    }
+    .hero-section .role {
+        font-size: 0.9em;
+    }
+    .profile-pic-container {
+        width: 100px;
+        height: 100px;
+    }
+    .main-navigation a {
+        padding: 8px 15px;
+        font-size: 0.85em;
+    }
+    .content-section h2 {
+        font-size: 1.4em;
+    }
+    .content-section p, .content-section ul li {
+        font-size: 0.9em;
+    }
+    .project-item h3 {
+        font-size: 1.1em;
+    }
+    .project-item p {
+        font-size: 0.85em;
+    }
+    /* Ajuste para o botão da lâmpada em telas muito pequenas */
+    #theme-toggle-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2em;
+        top: 15px;
+        right: 15px;
+    }
+}

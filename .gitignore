@@ -1,0 +1,39 @@
+# Arquivos de Sistema Operacional
+.DS_Store
+Thumbs.db
+.localized
+
+# Ambientes de Desenvolvimento Web
+node_modules/
+npm-debug.log
+yarn-error.log
+.env
+.idea/             # Para usuários de IDEs como IntelliJ/WebStorm
+.vscode/           # Para usuários do VS Code (opcional, se você não quiser compartilhar configurações do workspace)
+
+# Logs e Temporários
+*.log
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Arquivos de Backup e Compilação (se houver)
+*.bak
+*.swp
+*.swo
+*.obj
+*.exe
+*.dll
+*.class           # Se você compilar Java localmente
+target/           # Pasta de build do Maven/Gradle para projetos Java/Spring Boot
+
+# Arquivos de Imagem e Outros Grandes Ativos (Se não forem essenciais para o repo, mas você os usa localmente)
+# profile.jpg     # Se você só quiser que a imagem seja local, mas para portfólio, geralmente ela vai junto.
+# *.psd           # Arquivos do Photoshop
+# *.ai            # Arquivos do Illustrator
+# /images/large-raw-files/ # Exemplo: pasta com imagens originais de alta resolução
+
+# Dependências de Pacotes (se você adicionar NPM/Yarn no futuro)
+package-lock.json
+# yarn.lock

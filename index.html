@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guilherme Bonfim - Portfólio</title>
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <button id="theme-toggle-btn" aria-label="Alternar Tema">
+        <i class="far fa-lightbulb"></i> </button>
+
+    <canvas id="starryBackground"></canvas>
+
+    <header class="hero-section">
+        <div class="profile-pic-container">
+            <img src="profile.jpg" alt="Guilherme Bonfim" class="profile-pic">
+        </div>
+        <h1>Guilherme Bonfim</h1>
+        <p class="role">&lt;/Desenvolvedor Front-end&gt;</p>
+        <div class="social-links">
+            <a href="https://github.com/GLBonfim" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/glbonfim/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="mailto:guiloreto10@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://wa.me/+351912639748" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </header>
+
+    <main>
+        <nav class="main-navigation">
+            <ul>
+                <li><a href="#about" data-section="about" class="nav-link"><i class="fas fa-user"></i> Sobre mim</a></li>
+                <li><a href="#soft-skills" data-section="soft-skills" class="nav-link"><i class="fas fa-brain"></i> Soft Skills</a></li>
+                <li><a href="#hard-skills" data-section="hard-skills" class="nav-link"><i class="fas fa-laptop-code"></i> Hard Skills</a></li>
+                <li><a href="#services" data-section="services" class="nav-link"><i class="fas fa-handshake"></i> Meus serviços contratáveis</a></li>
+                <li><a href="#projects" data-section="projects" class="nav-link"><i class="fas fa-code"></i> Meus Projetos</a></li>
+            </ul>
+        </nav>
+
+        <section id="about" class="content-section hidden">
+            <h2><i class="fas fa-user"></i> Sobre mim</h2>
+            <p>Olá! Sou Guilherme Bonfim, um entusiasta da programação com 22 anos, atualmente residindo em Portugal. Possuo experiência consolidada em desenvolvimento front-end, e estou em constante aprimoramento, focado nos estudos de back-end com tecnologias como Java, Spring Boot e Database. Meu objetivo é me consolidar plenamente na carreira de desenvolvedor, buscando desafios e oportunidades para aplicar e expandir meus conhecimentos.</p>
+        </section>
+
+        <section id="soft-skills" class="content-section hidden">
+            <h2><i class="fas fa-brain"></i>Soft Skills</h2>
+            <ul>
+                <li>**Comunicação Eficaz:** Habilidade de expressar ideias complexas de forma clara e concisa para diferentes públicos.</li>
+                <li>**Trabalho em Equipe:** Colaboração ativa e contribuição para um ambiente produtivo e harmonioso.</li>
+                <li>**Resolução de Problemas:** Abordagem lógica e criativa para identificar e solucionar desafios técnicos.</li>
+                <li>**Adaptabilidade:** Capacidade de se ajustar rapidamente a novas tecnologias, metodologias e requisitos.</li>
+                <li>**Proatividade:** Iniciativa para buscar soluções, otimizações e melhorias contínuas.</li>
+                <li>**Pensamento Crítico:** Análise profunda de situações para tomar decisões informadas.</li>
+                <li>**Gestão de Tempo:** Organização e priorização de tarefas para cumprir prazos e metas.</li>
+            </ul>
+        </section>
+
+        <section id="hard-skills" class="content-section hidden">
+            <h2><i class="fas fa-laptop-code"></i> Hard Skills</h2>
+            <ul>
+                <li>Linguagens de Programação: <i class="fab fa-js"></i> JavaScript (Front-end), <i class="fab fa-java"></i> Java (Back-end)</li>
+                <li> Front-end: <i class="fab fa-html5"> </i> HTML5, <i class="fab fa-css3"></i> CSS3, <i class="fab fa-js"></i> JavaScript</li>
+                <li>Back-end: <i class="fab fa-java"></i> Java, <i class="fab fa-spring-boot"></i> Spring Boot</li>
+                <li><i class="fab fa-git"></i> Git, <i class="fab fa-github"></i> GitHub</li>
+                <li><i class="fas fa-code"></i> Conceitos: RESTful APIs, Programação Orientada a Objetos (POO)</li>
+            </ul>
+        </section>
+        <section id="services" class="content-section hidden">
+            <h2><i class="fas fa-handshake"></i> Meus serviços contratáveis</h2>
+            <ul>
+                <li>Desenvolvimento Front-end Responsivo: Criação de interfaces de usuário modernas, intuitivas e totalmente responsivas, garantindo uma excelente experiência em qualquer dispositivo (desktop, tablet, mobile) utilizando HTML, CSS e JavaScript.</li>
+                <li>Implementação e Otimização de UI/UX: Transformação de designs em código funcional, com foco na usabilidade e na performance, para proporcionar interações fluidas e agradáveis ao usuário.</li>
+                <li>Desenvolvimento de APIs RESTful (Java/Spring Boot): Construção de APIs robustas e eficientes para a comunicação entre aplicações, utilizando Java e Spring Boot, ideais para back-ends de sistemas web e mobile.</li>
+                <li>Manutenção e Refatoração de Código: Serviços de otimização, correção de bugs e refatoração de bases de código existentes, visando melhorar a performance, escalabilidade e manutenibilidade de projetos.</li>
+            </ul>
+        </section>
+
+        <section id="projects" class="content-section hidden">
+            <h2><i class="fas fa-code"></i> Meus Projetos</h2>
+            <div class="project-grid">
+                <div class="project-item">
+                    <h3>API de Fretes e Rastreamento</h3>
+                    <p>Desenvolvimento de uma API RESTful robusta, projetada para o cálculo eficiente de fretes e o rastreamento em tempo real de pedidos, oferecendo integração facilitada para sistemas de e-commerce e logística.</p>
+                    <a href="https://github.com/GLBonfim/api_rest_fretes" target="_blank">Ver Projeto</a>
+                </div>
+                <div class="project-item">
+                    <h3>Gerador de QR Code Simplificado</h3>
+                    <p>Implementação de um componente web minimalista para geração de códigos QR, com a funcionalidade de direcionar para um website de front-end específico. Este projeto demonstra a integração de elementos visuais com funcionalidades de redirecionamento digital.</p>
+                    <a href="https://github.com/GLBonfim/qr-code-component" target="_blank">Ver Projeto</a>
+                </div>
+                <div class="project-item">
+                    <h3>Página de Perfil e Links Sociais</h3>
+                    <p>Criação de uma página web singular, estilizada como um perfil profissional, que consolida e apresenta links diretos para diversas plataformas sociais e meios de contato. Ideal como um cartão de visitas digital ou portfólio de links unificado.</p>
+                    <a href="https://github.com/GLBonfim/social-links-profile-main/" target="_blank">Ver Projeto</a>
+                </div>
+                </div>
+        </section>
+    </main>
+
+    <script src="starry_background.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
