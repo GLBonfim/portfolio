@@ -10,7 +10,8 @@
 
 <br>
 
-![Captura de Tela do Portfólio - Tema Escuro](![alt text](/src/image.png))
+
+![alt text](/src/image.png)
 
 ## 🌟 Visão Geral
 
@@ -42,14 +43,21 @@ Este é o repositório do meu portfólio pessoal, uma aplicação web moderna e 
 
 ## 📂 Estrutura do Projeto
 
-.
-├── index.html                  # Página principal do portfólio
-├── src/
-│   ├── style.css               # Estilos CSS principais e temas (escuro/claro)
-│   └── script.js               # Lógica JavaScript para interatividade da UI
-├── starry_background.js        # Script para o fundo de noite estrelada
-├── profile.jpg                 # Imagem de perfil (substitua pela sua)
-└── README.md                   # Este arquivo (você está lendo ele!)
+├── src/   
+   └── style.css   
+├── index.html   
+├── script.js   
+├── starry_background.js   
+├── profile.jpg   
+└── README.md   
+
+* `index.html`: Página principal do portfólio.
+* `src/`: Pasta para arquivos de estilo e scripts.
+    * `style.css`: Estilos CSS principais e temas (escuro/claro).
+    * `script.js`: Lógica JavaScript para interatividade da interface do usuário.
+* `starry_background.js`: Script para o fundo de noite estrelada.
+* `profile.jpg`: Imagem de perfil.
+* `README.md`: Este arquivo que você está lendo.
 
 
 ## 🖥️ Como Visualizar e Rodar
@@ -81,8 +89,8 @@ Sinta-se à vontade para personalizar este portfólio com suas próprias informa
 
 Estou sempre aberto a novas conexões e oportunidades!
 
-* **GitHub:** [![GitHub](https://img.shields.io/badge/GLBonfim-100000?style=flat&logo=github&logoColor=white)](https://github.com/GLBonfim) ou [@GLBonfim](https://github.com/GLBonfim)
-* **LinkedIn:** [![LinkedIn](https://img.shields.io/badge/Guilherme_Bonfim-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/glbonfim/) ou [@glbonfim](https://www.linkedin.com/in/glbonfim/)
-* **Instagram:** [![Instagram](https://img.shields.io/badge/onloreto13-E4405F?style=flat&logo=instagram&logoColor=white)](https://instagram.com/onloreto13) ou [@onloreto13](https://instagram.com/onloreto13)
+* **GitHub:** [![GitHub](https://img.shields.io/badge/GLBonfim-100000?style=flat&logo=github&logoColor=white)](https://github.com/GLBonfim)
+* **LinkedIn:** [![LinkedIn](https://img.shields.io/badge/Guilherme_Bonfim-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/glbonfim/)
+* **Instagram:** [![Instagram](https://img.shields.io/badge/onloreto13-E4405F?style=flat&logo=instagram&logoColor=white)](https://instagram.com/onloreto13)
 
 ---
