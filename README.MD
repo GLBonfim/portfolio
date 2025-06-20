@@ -10,7 +10,7 @@
 
 <br>
 
-![Captura de Tela do Portfólio - Tema Escuro](![alt text](image.png))
+![Captura de Tela do Portfólio - Tema Escuro](![alt text](/src/image.png))
 
 ## 🌟 Visão Geral
 
