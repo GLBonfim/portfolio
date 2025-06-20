@@ -81,8 +81,8 @@ Sinta-se à vontade para personalizar este portfólio com suas próprias informa
 
 Estou sempre aberto a novas conexões e oportunidades!
 
-* **GitHub:** [![GitHub](https://img.shields.io/badge/GLBonfim-100000?style=flat&logo=github&logoColor=white)](https://github.com/GLBonfim) ou [@GLBonfim](https://github.com/GLBonfim)
-* **LinkedIn:** [![LinkedIn](https://img.shields.io/badge/Guilherme_Bonfim-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/glbonfim/) ou [@glbonfim](https://www.linkedin.com/in/glbonfim/)
-* **Instagram:** [![Instagram](https://img.shields.io/badge/onloreto13-E4405F?style=flat&logo=instagram&logoColor=white)](https://instagram.com/onloreto13) ou [@onloreto13](https://instagram.com/onloreto13)
+* **GitHub:** [![GitHub](https://img.shields.io/badge/GLBonfim-100000?style=flat&logo=github&logoColor=white)](https://github.com/GLBonfim)
+* **LinkedIn:** [![LinkedIn](https://img.shields.io/badge/Guilherme_Bonfim-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/glbonfim/)
+* **Instagram:** [![Instagram](https://img.shields.io/badge/onloreto13-E4405F?style=flat&logo=instagram&logoColor=white)](https://instagram.com/onloreto13)
 
 ---
