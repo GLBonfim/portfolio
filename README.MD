@@ -44,11 +44,17 @@ Este é o repositório do meu portfólio pessoal, uma aplicação web moderna e 
 
 .
 ├── index.html
+
 ├── src/
+
 │   ├── style.css
+
 │   └── script.js
+
 ├── starry_background.js
+
 ├── profile.jpg
+
 └── README.md
 
 * `index.html`: Página principal do portfólio.
