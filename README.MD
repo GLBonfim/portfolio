@@ -44,7 +44,7 @@ Este é o repositório do meu portfólio pessoal, uma aplicação web moderna e 
 ## 📂 Estrutura do Projeto
 
 ├── src/   
-   └── style.css   
+    └── style.css   
 ├── index.html   
 ├── script.js   
 ├── starry_background.js   
