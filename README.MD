@@ -14,7 +14,7 @@
 
 ## 🌟 Visão Geral
 
-Este é o repositório do meu portfólio pessoal, uma aplicação web moderna e responsiva projetada para apresentar meus projetos de desenvolvimento, habilidades técnicas e informações de contato. Desenvolvido com uma base sólida de **HTML5**, **CSS3** e **JavaScript (Puro)**, este portfólio destaca minha transição e aprofundamento em tecnologias de **Back-end** como **Java** e **Spring Boot**.
+Esse é o repositório do meu portfólio pessoal, uma aplicação web moderna e responsiva projetada para apresentar meus projetos de desenvolvimento, habilidades técnicas e informações de contato. Desenvolvido com uma base sólida de **HTML5**, **CSS3** e **JavaScript (Puro)**, este portfólio destaca minha transição e aprofundamento em tecnologias de **Back-end** como **Java** e **Spring Boot**.
 
 ## 🚀 Funcionalidades Principais
 
